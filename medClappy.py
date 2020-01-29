@@ -3,11 +3,9 @@ import pyautogui
 import random
 from PIL import Image
 
+#uri for your browser
 chrome_app='C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
 urlFile="urls.txt"
-
-facebookUrl="https://www.facebook.com/groups/mediumwriting/permalink/1187554121618814/"
-
 
 with open(urlFile) as fp:
     url=fp.readline()
