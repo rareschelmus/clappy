@@ -20,9 +20,9 @@ with open(urlFile) as fp:
         ok=0
         while ok == 0 and k != 4:
             screenshot=pyautogui.screenshot()
-            graySS=screenshot.convert("L")
-            bwSS=graySS.point(lambda x: 0 if x<255 else 255, '1')
-            bwSS.save("an"+str(k)+".png")
+            graySS=screenshot.convert("L")                          #screenshot turned to greyscale
+            bwSS=graySS.point(lambda x: 0 if x<255 else 255, '1')   #greyscale turned to black and white image, threshold applied
+            #bwSS.save("an"+str(k)+".png" # uncomment this to check image if doubts
             k+=1
             pattern=Image.open("clapThresholded.png")
 
