@@ -37,9 +37,6 @@ with open(urlFile) as fp:
             else:
                 ok=1
 
-        # box = pyautogui.locateOnScreen("clapGreen.png")
-        # print(box)
-        #
         if ok==1:
             pyautogui.click(x=box[0]+20,y=box[1]+20,duration=1.0)
 
