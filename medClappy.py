@@ -18,7 +18,7 @@ with open(urlFile) as fp:
 
         k=0
         ok=0
-        while ok == 0 and k != 4:
+        while ok == 0 and k != 6:
             screenshot=pyautogui.screenshot()
             graySS=screenshot.convert("L")                          #screenshot turned to greyscale
             bwSS=graySS.point(lambda x: 0 if x<255 else 255, '1')   #greyscale turned to black and white image, threshold applied
@@ -30,7 +30,7 @@ with open(urlFile) as fp:
             print(box)
             if box is None:
                 pyautogui.moveTo(x=200, y=200, duration=0.5)
-                pyautogui.hscroll(-300)
+                pyautogui.hscroll(-700)
                 pyautogui.moveTo(x=300, y=300, duration=1.0)
             else:
                 ok=1
